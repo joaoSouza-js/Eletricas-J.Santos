@@ -1,5 +1,7 @@
 import { styled } from "../../styles/global"
 import PresentationBackground from '../../assets/presentationBackgorund.jpg'
+import FooterBackground from  '../../assets/footerBackground.png'
+import { Flame } from "lucide-react"
 
 export const HomeContainer = styled('div', {
     height: '100vh'
@@ -50,35 +52,7 @@ export const PresentationNavigation  = styled('div', {
    
     rowGap: '2.1875rem',
 
-    '& > a': {
-        fontWeight: 700,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '22.5rem',
-        height: '3.93rem',
-        borderRadius: '0.94rem',
-        borderWidth: 1,
-        borderStyle: "solid",
-
-
-
-    },
-
-    '& > a:nth-of-type(1)':{
-        color: '$blue800',
-        backgroundColor: '$yellow400'
-    },
-
-    '& > a:nth-of-type(2)':{
-        color: '$white',
-        backgroundColor: 'transparent',
-        borderColor: '$white'
-    },
-
-    '& > a:hover': {
-        opacity: .8,
-    }
+    
 })
 
 export const PresentationFooter = styled('div', {
@@ -107,8 +81,11 @@ export const EmphasisProducts = styled('div', {
     '& > div': {
         width: '100%',
         marginTop: '-9.5rem',
-        '& >  strong': {
+        zIndex: 2,
+
+        '& > h2': {
             color: '$white',
+        
             
             'font-size': '2.1875rem',
             'font-weight': 700,
@@ -147,7 +124,7 @@ export const Category = styled ('div', {
             height: '6.25rem',
         },
         
-        '& > strong': {
+        '& > h2': {
             display: 'inline-block',
             marginTop: '5.19rem',
             color: '$white',
@@ -162,11 +139,89 @@ export const Category = styled ('div', {
 
 })
 export const CategoryProducts = styled ('div', {
-    position: 'relative',
-    top: '-14.1rem',
+    
     display: 'grid',
     gap: '1.88rem' ,
     maxWidth: '74.375rem',
     margin: '0 auto',
+    marginTop: '-14.1rem',
     gridTemplateColumns: 'repeat(auto-fill, minmax(16.43rem, 1fr))',
 })
+
+export const StorePresentation = styled('section', {
+    textAlign: 'center',
+    marginTop: '9.88rem',
+    paddingTop: '3.75rem',
+    paddingBottom: '5.62rem',
+    backgroundColor: '$gray100',
+
+    
+
+    '& > h2': {
+        color: '$blue800',
+           
+       'font-size': '2.1875rem',
+       'font-weight': 700,
+       'lineHeight': 1.2,
+    },
+
+})
+
+export const StorePresentationContent = styled('div', {
+    marginTop: '1rem',
+    display: 'flex',
+    
+    alignItems: 'center',
+    gap: '1.44rem',
+
+    '& > img': {
+ 
+    },
+   
+  
+ 
+    '& > div p': {
+        color: '$gray800',
+        fontWeight: 400,
+        fontSize: '1.125rem',
+        maxWidth: 555
+    },
+
+    '& > div a': { 
+       
+        marginTop: '3.88rem'
+    }   
+})
+
+export const PhoneContact = styled('footer', {
+    marginTop: '9.75rem',
+    background: `url(${FooterBackground})`,
+    width: '100%',
+   
+    paddingLeft:'1.5rem',
+    paddingRight: '1.5rem',
+
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center',
+
+    '& > div': {
+        display: 'flex',
+        justifyContent:'center',
+        alignItems: 'flex-end',
+        columnGap: '1.38rem',
+       
+
+        '& > img': {
+            marginTop: '-70px'
+        },
+
+        '& > a': {
+            marginBottom: '3.5rem'
+        }
+
+
+        
+    }
+
+})
+
