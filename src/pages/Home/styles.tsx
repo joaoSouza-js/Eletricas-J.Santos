@@ -52,7 +52,6 @@ export const PresentationNavigation  = styled('div', {
 
     '& > a': {
         fontWeight: 700,
-        background: 'Red',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -94,6 +93,7 @@ export const EmphasisProducts = styled('div', {
     marginTop: '5.5rem',
     alignItems: 'center',
     textAlign: 'center',
+    
 
     
 
@@ -105,9 +105,8 @@ export const EmphasisProducts = styled('div', {
     },
 
     '& > div': {
-        width: '74.375rem',
-        position: 'relative',
-        top: '-9.125rem',
+        width: '100%',
+        marginTop: '-9.5rem',
         '& >  strong': {
             color: '$white',
             
@@ -124,10 +123,50 @@ export const EmphasisProducts = styled('div', {
 
 export const Products = styled('section', {
     display: 'grid',
-    padding: '0 1.5rem',
-    width: '100%',
+    margin: '0 auto',
     marginTop: '1.56rem',
+    maxWidth: '74.375rem',
     gridTemplateColumns: 'repeat(auto-fill, minmax(16.43rem, 1fr))',
     gap: '1.88rem' , 
-    flexWrap: 'wrap',
+})
+
+
+export const Category = styled ('div', {
+    marginTop: '3.75rem',
+
+    '& > div:nth-of-type(1)': {
+        height: '28.5rem',
+        display: 'flex',
+        gap: '7.19rem',
+        borderTopRightRadius: '0.94rem',
+        justifyContent: 'center',
+        backgroundColor : '$blue800',
+
+        "& > img": {
+            width: '6.20038rem',
+            height: '6.25rem',
+        },
+        
+        '& > strong': {
+            display: 'inline-block',
+            marginTop: '5.19rem',
+            color: '$white',
+               
+           'font-size': '2.1875rem',
+           'font-weight': 700,
+           'lineHeight': 1.2,
+        }
+        
+    },
+
+
+})
+export const CategoryProducts = styled ('div', {
+    position: 'relative',
+    top: '-14.1rem',
+    display: 'grid',
+    gap: '1.88rem' ,
+    maxWidth: '74.375rem',
+    margin: '0 auto',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(16.43rem, 1fr))',
 })

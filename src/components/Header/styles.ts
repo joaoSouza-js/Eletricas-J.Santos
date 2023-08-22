@@ -30,6 +30,7 @@ export const HeaderContainer = styled('header',{
 
 export const HeaderNavigator = styled('nav', {
     display: 'flex',
+    flexWrap: 'wrap',
     flexGrow: 1,
     alignItems: 'center',
     paddingLeft: '158px',

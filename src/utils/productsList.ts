@@ -21,7 +21,7 @@ export const ProductList = [
         name:  'Lustre suspenso rústico',
         price: 1000,
         oldPrice: 1500,
-        maximumInstallment: 2,
+        maximumInstallment: 5,
     },
     {
         id: '03',

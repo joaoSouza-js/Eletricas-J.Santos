@@ -74,7 +74,7 @@ export const ProductPrices = styled('div', {
     paddingLeft: '0.75rem',
 
      '& > span' : {
-       
+        textDecoration: 'line-through',
         fontSize: '1rem',
        
      },
