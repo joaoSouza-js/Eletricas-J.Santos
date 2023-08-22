@@ -1,6 +1,6 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { DropdownMenuArrow, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './styles';
-import { ArrowDown, ChevronDown } from 'lucide-react';
+import {  DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './styles';
+import {  ChevronDown } from 'lucide-react';
 
 interface Category {
     category: string,
