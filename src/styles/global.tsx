@@ -7,6 +7,9 @@ export const {styled,config,createTheme,css,globalCss,getCssText} = createStitch
             'blue400': '#1F2860',
             'blue800': '#202332',
             'yellow400': '#FBAF17',
+            'gray300': '#E0E0E0',
+            'gray800': '#333',
+            'gray100': '#F7F7F7',
 
         },
         fonts: {

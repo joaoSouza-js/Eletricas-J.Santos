@@ -1,7 +1,12 @@
 import { Header } from "../../components/Header";
-import { HomeContainer, Presentation, PresentationContent, PresentationFooter, PresentationNavigation } from "./styles";
+import { EmphasisProducts, HomeContainer, Presentation, PresentationContent, PresentationFooter, PresentationNavigation, Products } from "./styles";
 import { ArrowDown } from 'lucide-react';
 import WomenImage from '../../assets/women.png'
+import EmphasisLayerImage from '../../assets/emphasisLayer.jpg'
+import productImage01Image from '../../assets/productImage01.jpeg'
+import { ProductCard } from "../../components/ProductCard";
+import { ProductList } from "../../utils/productsList";
+
 
 export function Home(){
     return (
@@ -29,7 +34,34 @@ export function Home(){
                 src={WomenImage}
             />
         </Presentation>
-        <div></div>
+        <EmphasisProducts>
+            <img 
+                src={EmphasisLayerImage}
+            />
+            <div>
+                <strong>PRODUTOS EM DESTAQUE</strong>
+                <Products>
+                    {
+                        ProductList.map(product => (
+                            <ProductCard
+                                name={product.name}
+                                oldPrice={product.oldPrice}
+                                price={product.price}
+                                maximumInstallment={product.maximumInstallment}
+                                category={product.category}
+                                imageUrl={product.imageUrl}
+                            />
+
+                        ))
+                    }
+                      
+                </Products>
+
+            </div>
+        </EmphasisProducts>
+
+
+        
      </HomeContainer>
     )
 }

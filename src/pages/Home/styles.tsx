@@ -87,3 +87,47 @@ export const PresentationFooter = styled('div', {
     display: 'flex',
     alignItems: 'center',
 })
+
+export const EmphasisProducts = styled('div', {
+    display: 'flex',
+    flexDirection: 'column',
+    marginTop: '5.5rem',
+    alignItems: 'center',
+    textAlign: 'center',
+
+    
+
+    '& > img': {
+        position: 'relative',
+        left: '-9.44rem',
+        width: '78.3rem',
+        height: '28.5'
+    },
+
+    '& > div': {
+        width: '74.375rem',
+        position: 'relative',
+        top: '-9.125rem',
+        '& >  strong': {
+            color: '$white',
+            
+            'font-size': '2.1875rem',
+            'font-weight': 700,
+            'lineHeight': 1.2,
+            
+        }
+    },
+
+
+
+})
+
+export const Products = styled('section', {
+    display: 'grid',
+    padding: '0 1.5rem',
+    width: '100%',
+    marginTop: '1.56rem',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(16.43rem, 1fr))',
+    gap: '1.88rem' , 
+    flexWrap: 'wrap',
+})
