@@ -1,0 +1,84 @@
+/* Reset using "*" selector */
+
+/* Apply a reset to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Set default font family and color for all elements */
+body {
+  font-family: goth, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #202332;
+  background-color: #fff;
+}
+
+/* Remove list styles and default link behavior */
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default button styles */
+button, input, select, textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Remove extra space for images */
+img {
+  vertical-align: middle;
+}
+
+
+/* Normalize form elements */
+input, textarea {
+  appearance: none;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+
+
+/* Define Gotham Bold font */
+@font-face {
+  font-family: 'gothan';
+  src: url('./src/fonts/GothamBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Define Gotham Light font */
+@font-face {
+  font-family: 'gothan';
+  src: url('./src/fonts/GothamLight.ttf') format('truetype');
+  font-weight: lighter; /* Adjust as needed */
+  font-style: normal;
+}
+
+/* Define Gotham Medium font */
+@font-face {
+  font-family: 'gothan';
+  src: url('./src/fonts/GothamMedium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Define Gotham Book font */
+
+
+
+#root {
+  font-family: gothan, sans-serif;
+}
