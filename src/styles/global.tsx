@@ -14,6 +14,11 @@ export const {styled,config,createTheme,css,globalCss,getCssText} = createStitch
         },
         fonts: {
             sans: 'gothan , sans-serif'
-        }
+        },
+        media: {
+            bp1: '(max-width: 640px)',
+            bp2: '(min-width: 768px)',
+            bp3: '(min-width: 1024px)',
+          },
     }
 })

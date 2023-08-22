@@ -3,6 +3,7 @@ import { styled } from "../../styles/global";
 export const ButtonLink = styled('a', {
     fontWeight: 700,
     display: 'flex',
+    fontSize: '1rem',
     justifyContent: 'center',
     textTransform: 'uppercase',
     alignItems: 'center',

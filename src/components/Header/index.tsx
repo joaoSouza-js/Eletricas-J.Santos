@@ -1,6 +1,8 @@
 import HeaderBobbleSvg  from '../../assets/headerBobble.svg'
 import { HeaderNavigator, HeaderContainer } from './styles'
 import LogoSvg from '../../assets/Logo.svg'
+import { CategoryDropDownMenu } from '../CategoryDropDown'
+import { CategoryList } from '../../utils/categoryList'
 
 export function Header(){
     return (
@@ -22,7 +24,7 @@ export function Header(){
             </div>
             <HeaderNavigator>
                 <a href="#" >Home</a>
-                <div><span>Categorias</span></div>
+                <CategoryDropDownMenu categoryList={CategoryList}/>
                 <a href="#">Sobre</a>
                 <a href="#">Localização</a>
                 <a href="#">Contato</a>

@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 
@@ -81,4 +82,10 @@ input, textarea {
 
 #root {
   font-family: gothan, sans-serif;
+}
+
+* {
+  @media screen and (max-width: 720px) {
+    font-size: 85%;
+  }
 }

@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header";
-import { Category, CategoryProducts, Copyright, EmphasisProducts, HomeContainer, HomeFooter, HomeFooterContent, HomeFooterHeader, PhoneContact, Presentation, PresentationContent, PresentationFooter, PresentationNavigation, Products, StorePresentation, StorePresentationContent } from "./styles";
+import { Category, CategoryProducts,  EmphasisProducts, HomeContainer, PhoneContact, Presentation, PresentationContent, PresentationFooter, PresentationNavigation, Products, StorePresentation, StorePresentationContent } from "./styles";
 import { ArrowDown } from 'lucide-react';
 import WomenImage from '../../assets/women.png'
 import EmphasisLayerImage from '../../assets/emphasisLayer.jpg'
@@ -10,11 +10,9 @@ import SnowImage from '../../assets/snow.svg'
 import StoreImage from '../../assets/store.png'
 import WomenThinkingImage from '../../assets/womenThink.png'
 import { ButtonLink } from "../../components/ButtonLink";
-import LogoWhiteImage from '../../assets/Logowhite.svg';
-import FacebookImage from  "../../assets/facebook.svg"
-import WhatsappImage from  "../../assets/whatsapp.svg"
-import InstagramImage from  "../../assets/instagram.svg"
+
 import { Footer } from "../../components/Footer";
+import { CategoryList } from "../../utils/categoryList";
 
 
 
@@ -28,7 +26,7 @@ export function Home(){
                 <p>Aqui na Elétrica J. Santos queremos trazer mais luz para o seu dia a dia! Temos produtos para toda sua casa com a melhor qualidade e atendimento da região!</p>
 
                 <PresentationNavigation>
-                    <ButtonLink href="#">VEJA NOSSOS PRODUTOS</ButtonLink>
+                    <ButtonLink href="#EmphasisProducts">VEJA NOSSOS PRODUTOS</ButtonLink>
                     <ButtonLink type={'secondary'}  href="#">NOS CONHEÇA MELHOR</ButtonLink>
 
                 </PresentationNavigation>
@@ -38,13 +36,11 @@ export function Home(){
                 </PresentationFooter>
             </PresentationContent>
             <img
-                style={{
-                    height:796,
-                }}
+                
                 src={WomenImage}
             />
         </Presentation>
-        <EmphasisProducts>
+        <EmphasisProducts id="EmphasisProducts">
             <img 
                 src={EmphasisLayerImage}
             />
@@ -81,7 +77,7 @@ export function Home(){
             </div>
             <CategoryProducts>
                 {
-                     ProductList.map(product => (
+                     CategoryList.map(product => (
                         <CategoryCard
                             category={product.category}
                             imageUrl={product.imageUrl}

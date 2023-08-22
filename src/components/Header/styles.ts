@@ -4,6 +4,11 @@ export const HeaderContainer = styled('header',{
     display: 'grid',
     gridTemplateColumns: '45%  55%',
     height: '5rem',
+
+    '@media (max-width: 720px)': {
+        display: 'flex',
+        flexDirection: 'column',
+    },
     
     
     '& > div': {
@@ -39,8 +44,17 @@ export const HeaderNavigator = styled('nav', {
     borderBottomLeftRadius: '150px',
     columnGap: '1.875rem',
 
+    '@media (max-width: 720px)': {
+        justifyContent: 'center',
+        padding: '0.5rem 1.5rem',
+        gap: '1rem',
+        paddingLeft: 0,
+        borderRadius: 0,
+    },
+
     '& > a': {
         cursor:'pointer',
+        fontSize: '1.125rem',
         
         '&:hover': {
             color:  '$blue400',

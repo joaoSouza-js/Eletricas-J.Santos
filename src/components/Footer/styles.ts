@@ -2,7 +2,8 @@ import { styled } from "../../styles/global"
 
 export const FooterContainer = styled('div', {
     backgroundColor: '$blue800',
-
+    fontSize: '1.125rem',
+    padding: '0 1.5rem',
 })
 
 export const HomeFooterContent = styled('div', {
@@ -17,6 +18,7 @@ export const HomeFooterContent = styled('div', {
 export const HomeFooterHeader = styled('div', {
     display: 'flex',
     justifyContent: 'space-between',
+    
 
     '& > div': {
         display: 'flex',
@@ -57,6 +59,8 @@ export const HomeFooterHeader = styled('div', {
 })
 
 export  const Copyright = styled('div', {
+    display: 'flex',
+    justifyContent: 'space-between',
     paddingTop: '2.31rem',
     paddingBottom: '1.56rem',
     marginTop: '5.56rem',

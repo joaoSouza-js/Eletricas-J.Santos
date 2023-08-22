@@ -1,7 +1,7 @@
 import { styled } from "../../styles/global"
 import PresentationBackground from '../../assets/presentationBackgorund.jpg'
 import FooterBackground from  '../../assets/footerBackground.png'
-import { Flame } from "lucide-react"
+
 
 export const HomeContainer = styled('div', {
     height: '100vh'
@@ -13,13 +13,29 @@ export const Presentation = styled('section', {
 
     background: `url(${PresentationBackground})`,
     width: '100%',
-    minHeight: 'calc(100% - 5rem)',
-   
+    
+
+    paddingBottom: '1.5rem',
     paddingLeft:'1.5rem',
     paddingRight: '1.5rem',
 
     backgroundSize: 'cover', // Para ajustar a imagem ao tamanho do elemento mantendo a proporção
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+
+    '& > img': {
+        height:796,
+        maxWidth: 702,
+        
+        '@media (max-width: 900px)': {
+            height:0,
+
+            width: 0,
+            position: 'absolute',
+            top: '-20px',
+            left: '-20px',
+             
+        },
+    }
 })
 
 export const PresentationContent = styled('div', {
@@ -56,8 +72,10 @@ export const PresentationNavigation  = styled('div', {
 })
 
 export const PresentationFooter = styled('div', {
+    fontSize: '1rem',
     marginTop: '2rem',
     display: 'flex',
+    gap: '1.31rem',
     alignItems: 'center',
 })
 
@@ -74,8 +92,15 @@ export const EmphasisProducts = styled('div', {
     '& > img': {
         position: 'relative',
         left: '-9.44rem',
-        width: '78.3rem',
-        height: '28.5'
+        maxWidth: '78.3rem',
+        height: '28.5',
+
+        '@media (max-width: 720px)': {
+            position:'static',
+            width: '100%',
+            
+           
+        },
     },
 
     '& > div': {
@@ -104,12 +129,19 @@ export const Products = styled('section', {
     marginTop: '1.56rem',
     maxWidth: '74.375rem',
     gridTemplateColumns: 'repeat(auto-fill, minmax(16.43rem, 1fr))',
-    gap: '1.88rem' , 
+    gap: '1.25rem' , 
+
+    '@media (max-width: 480px)': {
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+    },
 })
 
 
 export const Category = styled ('div', {
     marginTop: '3.75rem',
+    textAlign: 'center',
 
     '& > div:nth-of-type(1)': {
         height: '28.5rem',
@@ -118,6 +150,8 @@ export const Category = styled ('div', {
         borderTopRightRadius: '0.94rem',
         justifyContent: 'center',
         backgroundColor : '$blue800',
+
+       
 
         "& > img": {
             width: '6.20038rem',
@@ -141,7 +175,8 @@ export const Category = styled ('div', {
 export const CategoryProducts = styled ('div', {
     
     display: 'grid',
-    gap: '1.88rem' ,
+    columnGap: '1.88rem' ,
+    rowGap: '2.06rem',
     maxWidth: '74.375rem',
     margin: '0 auto',
     marginTop: '-14.1rem',
@@ -154,6 +189,7 @@ export const StorePresentation = styled('section', {
     paddingTop: '3.75rem',
     paddingBottom: '5.62rem',
     backgroundColor: '$gray100',
+
 
     
 
@@ -174,9 +210,18 @@ export const StorePresentationContent = styled('div', {
     alignItems: 'center',
     gap: '1.44rem',
 
-    '& > img': {
- 
+    '@media (max-width: 1200px)': {
+        flexDirection: 'column',
+
+        '& > img': {
+            width: '100%',
+            maxWidth: 555
+    
+            
+        },
     },
+
+
    
   
  
@@ -204,6 +249,24 @@ export const PhoneContact = styled('footer', {
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
 
+    '@media (max-width: 900px)': {
+        marginTop: '6rem',
+    },
+
+    'img': {
+        '@media (max-width: 900px)': {
+            height:0,
+
+            width: 0,
+            position: 'absolute',
+            top: '-20px',
+            left: '-20px',
+             
+        },
+    },
+
+  
+
     '& > div': {
         display: 'flex',
         justifyContent:'center',
@@ -216,7 +279,12 @@ export const PhoneContact = styled('footer', {
         },
 
         '& > a': {
-            marginBottom: '3.5rem'
+            marginBottom: '3.5rem',
+
+            
+            '@media (max-width: 900px)': {
+                marginBottom: 0,
+            },
         }
 
 

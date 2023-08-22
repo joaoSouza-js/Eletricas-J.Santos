@@ -3,6 +3,7 @@ import LogoWhiteImage from '../../assets/Logowhite.svg';
 import FacebookImage from  "../../assets/facebook.svg"
 import WhatsappImage from  "../../assets/whatsapp.svg"
 import InstagramImage from  "../../assets/instagram.svg"
+import NeoLogoImage from  "../../assets/neo.svg"
 
 
 export function Footer(){
@@ -46,7 +47,11 @@ export function Footer(){
 
                     <Copyright>
                         <span>© Copyright 2021 - Elétrica J. Santos - Todos os Direitos Reservados</span>
-                        <span>Desenvolvido por </span>
+                        <div>
+                            <span>Desenvolvido por </span>
+                            <img src={NeoLogoImage}/> 
+
+                        </div>
                     </Copyright>
 
                 </HomeFooterContent>
