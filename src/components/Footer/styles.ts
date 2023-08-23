@@ -68,5 +68,16 @@ export  const Copyright = styled('div', {
     paddingTop: '2.31rem',
     paddingBottom: '1.56rem',
     marginTop: '5.56rem',
-    borderTop: '1px solid $yellow400'
+    borderTop: '1px solid $yellow400',
+    
+
+    '@media (max-width: 720px)': {
+        '& > span': {
+            display: 'inline-block',
+     
+            width: '100%',
+            maxWidth: '65%'
+
+        }
+    }
 })

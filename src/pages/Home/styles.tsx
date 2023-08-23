@@ -143,7 +143,7 @@ export const Products = styled('section', {
     margin: '0 auto',
     marginTop: '1.56rem',
     maxWidth: '74.375rem',
-    padding: '0 2.5rem',
+    padding: '0 1.5rem',
     gridTemplateColumns: 'repeat(auto-fill, minmax(16.2rem, 1fr))',
     gap: '1.25rem' , 
 
@@ -151,7 +151,7 @@ export const Products = styled('section', {
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
-        
+        padding: '0 3rem',
 
         gridTemplateColumns: '1fr 1fr'
     },

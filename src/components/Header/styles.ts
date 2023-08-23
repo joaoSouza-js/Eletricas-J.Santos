@@ -52,6 +52,14 @@ export const HeaderNavigator = styled('nav', {
         borderRadius: 0,
     },
 
+    '& > a:nth-of-type(1)': {
+        fontWeight: 'bold',
+        borderBottom: '3px solid $white',
+        borderRadius: '3px'
+        
+    },
+
+
     '& > a': {
         cursor:'pointer',
         fontSize: '1.125rem',

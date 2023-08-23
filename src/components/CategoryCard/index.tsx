@@ -11,7 +11,11 @@ export function CategoryCard({category,imageUrl}: CategoryCardProps){
         <CategoryCardContainer>
             <span>{category}</span>
             <div>
-                <img src={imageUrl} alt={`ilustração para a catgoria de  productos: ${category}`} />
+                <img 
+                    src={imageUrl} 
+                    alt={`ilustração para a catgoria de  productos: ${category}`} 
+                    title={`ilustração para a catgoria de  productos: ${category}`}
+                />
 
             </div>
 
