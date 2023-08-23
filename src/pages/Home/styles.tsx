@@ -19,7 +19,7 @@ export const Presentation = styled('section', {
     paddingLeft:'1.5rem',
     paddingRight: '1.5rem',
 
-    backgroundSize: 'cover', // Para ajustar a imagem ao tamanho do elemento mantendo a proporção
+    backgroundSize: 'cover', 
     backgroundPosition: 'center',
 
     '& > img': {
@@ -43,11 +43,20 @@ export const PresentationContent = styled('div', {
     marginTop: '5rem',
     color: '$white',
 
+    '@media (max-width: 720px)': {
+        'font-size': '2.375rem',
+        paddingTop: '5rem'
+    },
+
         '& > h1': {
           
             'font-size': '4.375rem',
             'font-weight': 700,
             'lineHeight': 1.2,
+
+            '@media (max-width: 720px)': {
+                'font-size': '2.375rem',
+            }
             
         },
 
@@ -67,6 +76,10 @@ export const PresentationNavigation  = styled('div', {
     flexDirection: 'column',
    
     rowGap: '2.1875rem',
+
+    '@media (max-width: 720px)': {
+        alignItems: 'center',
+    }
 
     
 })
@@ -92,10 +105,12 @@ export const EmphasisProducts = styled('div', {
     '& > img': {
         position: 'relative',
         left: '-9.44rem',
+        width: '100%',
         maxWidth: '78.3rem',
-        height: '28.5',
-
+        
+        
         '@media (max-width: 720px)': {
+            inset: '0',
             position:'static',
             width: '100%',
             
@@ -128,13 +143,17 @@ export const Products = styled('section', {
     margin: '0 auto',
     marginTop: '1.56rem',
     maxWidth: '74.375rem',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(16.43rem, 1fr))',
+    padding: '0 2.5rem',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(16.2rem, 1fr))',
     gap: '1.25rem' , 
 
     '@media (max-width: 480px)': {
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
+        
+
+        gridTemplateColumns: '1fr 1fr'
     },
 })
 
@@ -146,15 +165,21 @@ export const Category = styled ('div', {
     '& > div:nth-of-type(1)': {
         height: '28.5rem',
         display: 'flex',
-        gap: '7.19rem',
+        columnGap: '7.19rem',
         borderTopRightRadius: '0.94rem',
         justifyContent: 'center',
         backgroundColor : '$blue800',
 
+        '@media (max-width: 720px)': {
+            flexDirection: 'column',
+            justifyContent: 'normal',
+
+        },
+
        
 
         "& > img": {
-            width: '6.20038rem',
+            width: '6.20rem',
             height: '6.25rem',
         },
         
@@ -181,6 +206,11 @@ export const CategoryProducts = styled ('div', {
     margin: '0 auto',
     marginTop: '-14.1rem',
     gridTemplateColumns: 'repeat(auto-fill, minmax(16.43rem, 1fr))',
+
+    '@media (max-width: 480px)': {
+        flex: 1,
+        gridTemplateColumns: '1fr',
+    },
 })
 
 export const StorePresentation = styled('section', {
@@ -221,6 +251,14 @@ export const StorePresentationContent = styled('div', {
         },
     },
 
+    '@media (max-width: 720px)': {
+        '& > div': {
+            padding: '0 1.5rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+        }
+    },
 
    
   
@@ -250,7 +288,8 @@ export const PhoneContact = styled('footer', {
     backgroundPosition: 'center',
 
     '@media (max-width: 900px)': {
-        marginTop: '6rem',
+        padding: '1.5rem',  
+        marginTop: '4rem',
     },
 
     'img': {

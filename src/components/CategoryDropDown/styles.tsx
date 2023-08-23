@@ -24,8 +24,11 @@ export const DropdownMenuTrigger = styled(DropdownMenu.Trigger,{
     display: 'flex',
     fontWeight: 500,
     justifyContent: 'center',
+    alignItems: 'center',
     color: '$blue800',
-    cursor: 'pointer'
+    cursor: 'pointer',
+
+  
 })
 
 export const DropdownMenuItem = styled(DropdownMenu.Item,{
@@ -55,7 +58,12 @@ export const DropdownMenuItem = styled(DropdownMenu.Item,{
     '& > span':{
         fontSize: '1.125rem',
         color: '$blue800',
-        fontWeight: 500
+        fontWeight: 500,
+
+        '@media (max-width: 720px)': {
+            'font-size': '1rem',
+            fontWeight: 700
+        }
     }
 })
 

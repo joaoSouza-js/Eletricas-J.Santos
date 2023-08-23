@@ -1,7 +1,14 @@
 import { styled } from "../../styles/global"
 
 export const ProductCardContainer = styled('div', {
-    width: '16.43rem',
+ 
+
+    '@media (max-width: 720px)': {
+        flex: 1,
+        width: '100%',  
+        
+       
+    },
    
     position: 'relative',
     borderRadius: '0.9375rem',
@@ -49,11 +56,12 @@ export const Separator = styled('div', {
 
 export const ProductInformation = styled('div', {
     marginTop: '1.25rem',
-    fontSize: '1.43rem',
     color: '$blue800',
     textAlign: 'center',
-
+    
     '& > strong': {
+        fontSize: '1.43rem',
+        fontWeight: 500,
         color: '$gray800', 
     },
 

@@ -3,7 +3,7 @@ import { styled } from "@stitches/react";
 export const CategoryCardContainer = styled('div', {
     display: 'flex',
     alignItems: 'center',
-    width: '16.43rem',
+    
    
     flexDirection: 'column',
     gap: '1.25rem',

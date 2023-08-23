@@ -46,9 +46,9 @@ export const HeaderNavigator = styled('nav', {
 
     '@media (max-width: 720px)': {
         justifyContent: 'center',
-        padding: '0.5rem 1.5rem',
-        gap: '1rem',
-        paddingLeft: 0,
+        paddingLeft: '0px',
+        padding: '.8rem 1rem',
+        gap: '0.5rem',
         borderRadius: 0,
     },
 

@@ -2,8 +2,12 @@ import { styled } from "../../styles/global"
 
 export const FooterContainer = styled('div', {
     backgroundColor: '$blue800',
-    fontSize: '1.125rem',
+
     padding: '0 1.5rem',
+
+    'span': {
+        fontSize: '1rem',
+    }
 })
 
 export const HomeFooterContent = styled('div', {
