@@ -3,7 +3,7 @@ import { styled } from "../../styles/global"
 export const FooterContainer = styled('div', {
     backgroundColor: '$blue800',
 
-    padding: '0 1.5rem',
+    padding: '0 3rem',
 
     'span': {
         fontSize: '1rem',
@@ -22,6 +22,13 @@ export const HomeFooterContent = styled('div', {
 export const HomeFooterHeader = styled('div', {
     display: 'flex',
     justifyContent: 'space-between',
+
+    '@media (max-width: 420px)': {
+        flexDirection: 'column',
+        justifyContent: 'normal',
+        alignItems: 'center',
+        gap: '2rem'
+    },
     
 
     '& > div': {
@@ -45,7 +52,14 @@ export const HomeFooterHeader = styled('div', {
             lineHeight: 2,
             maxWidth: '22.5rem',
 
-        }
+        },
+
+       '@media (max-width: 420px)': {
+            display: 'flex',
+           
+            justifyContent: 'center',
+            alignItems: 'center',
+       }
 
 
      },
@@ -64,20 +78,42 @@ export const HomeFooterHeader = styled('div', {
 
 export  const Copyright = styled('div', {
     display: 'flex',
+    
     justifyContent: 'space-between',
     paddingTop: '2.31rem',
     paddingBottom: '1.56rem',
     marginTop: '5.56rem',
     borderTop: '1px solid $yellow400',
     
+    '& > div': {
+        display: 'flex',
+        gap: '0.31rem',
+        alignItems: 'center',
+    },
 
     '@media (max-width: 720px)': {
+        
         '& > span': {
             display: 'inline-block',
      
             width: '100%',
             maxWidth: '65%'
+        }
+    },
+    '@media (max-width: 420px)': {
+        flexDirection: 'column',
+        marginTop: '2.5rem',
+        gap: '2rem',
 
+        '& > span': {
+            display: 'inline-block',
+            maxWidth: 'none',
+            width: '100%',
+        
+        },
+
+        '& > div':{
+            alignSelf: 'flex-end'
         }
     }
 })

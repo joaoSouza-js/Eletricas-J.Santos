@@ -15,38 +15,59 @@ export const Presentation = styled('section', {
     width: '100%',
     
 
-    paddingBottom: '1.5rem',
+ 
     paddingLeft:'1.5rem',
     paddingRight: '1.5rem',
 
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
 
-    '& > img': {
-        height:796,
-        maxWidth: 702,
+    '& > div': {
+        maxWidth: '77.43rem',
+        marginLeft: '6.03rem',
+        display: 'flex',
         
         '@media (max-width: 900px)': {
-            height:0,
+            paddingLeft:'2rem',
+            paddingRight: '2rem',
+            maxWidth: 'none',
+            width: '100%',
+            marginLeft: '0px',
 
-            width: 0,
-            position: 'absolute',
-            top: '-20px',
-            left: '-20px',
-             
         },
+
+        '& > img': {
+            height:796,
+            maxWidth: 702,
+            
+            '@media (max-width: 900px)': {
+                height:0,
+    
+                width: 0,
+                position: 'absolute',
+                top: '-20px',
+                left: '-20px',
+                 
+            },
+        }
     }
+    
+
 })
 
 export const PresentationContent = styled('div', {
     maxWidth: 560,
     marginTop: '5rem',
-    color: '$white',
+    paddingBottom: '1.5rem',
 
-    '@media (max-width: 720px)': {
-        'font-size': '2.375rem',
-        paddingTop: '5rem'
+    '@media (max-width: 920px)': {
+        width: '100%',
+        display: 'flex',
+        maxWidth: 'none',
+        justifyContent: 'center',
+        flexDirection: 'column'
     },
+    color: '$white',
 
         '& > h1': {
           
@@ -54,14 +75,15 @@ export const PresentationContent = styled('div', {
             'font-weight': 700,
             'lineHeight': 1.2,
 
-            '@media (max-width: 720px)': {
+            '@media (max-width: 900px)': {
+                textAlign: 'center',
                 'font-size': '2.375rem',
             }
             
         },
 
         '& > p': {
-            'marginTop': '1.875rem' ,//30px
+            'marginTop': '1.88rem' ,//30px
             'font-size': '1.125rem',
             'font-weight': 400,
             'letter-spacing': '0.02em',
@@ -71,13 +93,13 @@ export const PresentationContent = styled('div', {
 })
 
 export const PresentationNavigation  = styled('div', {
-    marginTop: '5.5rem',
+    marginTop: '1.38rem',
     display: 'flex',
     flexDirection: 'column',
    
-    rowGap: '2.1875rem',
+    rowGap: '1.44rem',
 
-    '@media (max-width: 720px)': {
+    '@media (max-width: 900px)': {
         alignItems: 'center',
     }
 
@@ -86,7 +108,7 @@ export const PresentationNavigation  = styled('div', {
 
 export const PresentationFooter = styled('div', {
     fontSize: '1rem',
-    marginTop: '2rem',
+    marginTop: '2.5rem',
     display: 'flex',
     gap: '1.31rem',
     alignItems: 'center',
@@ -97,64 +119,114 @@ export const EmphasisProducts = styled('div', {
     flexDirection: 'column',
     marginTop: '5.5rem',
     alignItems: 'center',
-    textAlign: 'center',
+   
     
-
-    
-
-    '& > img': {
-        position: 'relative',
-        left: '-9.44rem',
-        width: '100%',
-        maxWidth: '78.3rem',
-        
-        
-        '@media (max-width: 720px)': {
-            inset: '0',
-            position:'static',
-            width: '100%',
-            
-           
-        },
-    },
-
-    '& > div': {
-        width: '100%',
-        marginTop: '-9.5rem',
+    '& > div:nth-of-type(2)': {
+        marginTop: '-11.2rem',
         zIndex: 2,
+        paddingLeft:'2rem',
+            paddingRight: '2rem',
 
         '& > h2': {
             color: '$white',
-        
-            
+            marginLeft: '15rem',
             'font-size': '2.1875rem',
             'font-weight': 700,
             'lineHeight': 1.2,
+
+            '@media (max-width: 720px)':{
+                textAlign: 'center',
+                marginLeft: '0',
+
+            }
             
-        }
-    },
+        },
+
+    }
 
 
 
 })
 
+export const EmphasisProductsHeader = styled('div', {
+    position: 'relative',
+    left: '-7.4375rem',
+    display:'flex',
+    maxWidth: '78.3125rem',
+   
+    margin: '0 auto',
+
+    '@media (max-width: 720px)':{
+        width: '100%',
+        left:'0',
+    },
+
+    '& > img': {
+        zIndex: -1,
+        marginLeft: '-4.2rem',
+        marginTop: '1.62rem',
+        position: 'relative',
+        width: '15.625rem',
+        height:' 15.75rem',
+
+        '@media (max-width: 720px)': {
+          
+            height:0,
+        
+            width: 0,
+            position: 'absolute',
+            top: '-20px',
+            left: '-20px',
+        },
+
+    },
+
+    
+
+    '& > div:nth-of-type(1)': {
+        width: '67.0625rem',
+        height: '28.5rem',
+        borderTopRightRadius: '0.94rem',
+        background: '$blue800',
+
+        '& > img': {
+            marginLeft: '20.75rem',
+        },
+
+        '@media (max-width: 720px)':{
+            width: '100%',
+            paddingLeft:'2rem',
+            paddingRight: '2rem',
+
+            '& > img': {
+                marginLeft: '0rem',
+            }
+
+        }
+
+       
+
+    }}
+)
+
 export const Products = styled('section', {
-    display: 'grid',
+    display: 'flex',
+   
     margin: '0 auto',
     marginTop: '1.56rem',
-    maxWidth: '74.375rem',
-    padding: '0 1.5rem',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(16.2rem, 1fr))',
-    gap: '1.25rem' , 
+    
+    zIndex: 2,
+    maxWidth: '71.6rem',
+   
+    flexWrap: 'wrap',
+    columnGap: '1.88rem' ,
+    rowGap: '2.06rem',
 
-    '@media (max-width: 480px)': {
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
-        padding: '0 3rem',
-
-        gridTemplateColumns: '1fr 1fr'
+    '@media (max-width: 1120px)': {
+        justifyContent: 'center',
+        maxWidth: '53.0625rem'
     },
+
 })
 
 
@@ -198,18 +270,20 @@ export const Category = styled ('div', {
 
 })
 export const CategoryProducts = styled ('div', {
-    
-    display: 'grid',
+    maxWidth: '71.6rem',
+    display: 'flex',
     columnGap: '1.88rem' ,
     rowGap: '2.06rem',
-    maxWidth: '74.375rem',
+    flexWrap: 'wrap',
+   
     margin: '0 auto',
     marginTop: '-14.1rem',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(16.43rem, 1fr))',
 
-    '@media (max-width: 480px)': {
-        flex: 1,
-        gridTemplateColumns: '1fr',
+    '@media (max-width: 1120px)': {
+        justifyContent: 'center',
+        paddingLeft:'2rem',
+        paddingRight: '2rem',
+        maxWidth: '53.0625rem'
     },
 })
 
@@ -231,6 +305,11 @@ export const StorePresentation = styled('section', {
        'lineHeight': 1.2,
     },
 
+    '@media (max-width: 720px)': {
+        paddingLeft:'2rem',
+        paddingRight: '2rem',
+    }
+
 })
 
 export const StorePresentationContent = styled('div', {
@@ -240,16 +319,6 @@ export const StorePresentationContent = styled('div', {
     alignItems: 'center',
     gap: '1.44rem',
 
-    '@media (max-width: 1200px)': {
-        flexDirection: 'column',
-
-        '& > img': {
-            width: '100%',
-            maxWidth: 555
-    
-            
-        },
-    },
 
     '@media (max-width: 720px)': {
         '& > div': {
@@ -260,10 +329,15 @@ export const StorePresentationContent = styled('div', {
         }
     },
 
+    '@media (max-width: 900px)': {
+        flexDirection: 'column',
+    },
+
    
   
  
-    '& > div p': {
+    '& > div:nth-of-type(2) p': {
+        textAlign:'left',
         color: '$gray800',
         fontWeight: 400,
         fontSize: '1.125rem',
@@ -274,6 +348,40 @@ export const StorePresentationContent = styled('div', {
        
         marginTop: '3.88rem'
     }   
+})
+
+export const StorePresentationContentImageWrapper = styled('div', {
+    display: 'flex',
+    alignItems: 'center',
+
+    '& > div': {
+        background: '$blue800',
+        width: '18rem',
+        height: '20.5625rem',
+    },
+
+    '& > img': {
+        width: '100%',
+        maxWidth: '34.6875rem',
+        height: '34.125rem',
+    },
+
+    '@media (max-width: 900px)': {
+        '& > div': {
+            display: 'absolute',
+            width: '1px',
+            top: '-2px',
+            left: '-2px',
+            height: '1px',
+        },
+
+        '& > img': {
+            width: '100%',
+            height: 'auto',
+        },
+    }
+
+
 })
 
 export const PhoneContact = styled('footer', {

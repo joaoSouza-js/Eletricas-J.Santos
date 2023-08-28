@@ -4,10 +4,12 @@ export const HeaderContainer = styled('header',{
     display: 'grid',
     gridTemplateColumns: '45%  55%',
     height: '5rem',
+    
 
-    '@media (max-width: 720px)': {
+    '@media (max-width: 900px)': {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'column'
+        
     },
     
     
@@ -16,6 +18,7 @@ export const HeaderContainer = styled('header',{
 
         '& > img:nth-of-type(1)': {
             height: '5rem',
+            width: '9rem',
 
         },
 
@@ -26,10 +29,28 @@ export const HeaderContainer = styled('header',{
             alignItems: 'center',
         
 
-        }
+            '& >  img:nth-of-type(1)': {
+                '@media (max-width: 900px)': {
+                    marginLeft: '-9rem'
+                }
+            }
+        },
+
     },
 
 
+
+})
+
+export const MobileHomeContainer = styled('header', {
+    display: 'flex',
+    padding: '2rem 3rem',
+    justifyContent: 'space-between',
+
+    '& > img': {
+        width: '2.5rem',
+        height: '2.5rem',
+    }
 
 })
 
@@ -44,7 +65,7 @@ export const HeaderNavigator = styled('nav', {
     borderBottomLeftRadius: '150px',
     columnGap: '1.875rem',
 
-    '@media (max-width: 720px)': {
+    '@media (max-width: 900px)': {
         justifyContent: 'center',
         paddingLeft: '0px',
         padding: '.8rem 1rem',
@@ -72,6 +93,20 @@ export const HeaderNavigator = styled('nav', {
             
         }
 
+
+    },
+
+    '& > a:last-of-type': {
+        color: '$white',
+        textTransform: 'capitalize',
+        '@media (max-width: 900px)': {
+            color:  '$blue800',
+            width: 'min-content',
+            backgroundColor: 'transparent',
+            
+        
+
+        }
 
     }
 })

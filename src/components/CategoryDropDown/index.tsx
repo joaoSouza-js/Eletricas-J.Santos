@@ -15,8 +15,8 @@ export function CategoryDropDownMenu({categoryList}:CategoryDropDownMenu){
     return (
         <DropdownMenu.Root>
             <DropdownMenuTrigger >
-                Categories 
-                <ChevronDown/>
+                Categorias
+            
             </DropdownMenuTrigger>
 
             <DropdownMenu.Portal>

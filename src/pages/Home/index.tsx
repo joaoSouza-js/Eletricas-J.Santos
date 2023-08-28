@@ -1,13 +1,13 @@
 import { Header } from "../../components/Header";
-import { Category, CategoryProducts,  EmphasisProducts, HomeContainer, PhoneContact, Presentation, PresentationContent, PresentationFooter, PresentationNavigation, Products, StorePresentation, StorePresentationContent } from "./styles";
+import { Category, CategoryProducts,  EmphasisProducts, EmphasisProductsHeader, HomeContainer, PhoneContact, Presentation, PresentationContent, PresentationFooter, PresentationNavigation, Products, StorePresentation, StorePresentationContent, StorePresentationContentImageWrapper } from "./styles";
 import { ArrowDown } from 'lucide-react';
 import WomenImage from '../../assets/women.png'
-import EmphasisLayerImage from '../../assets/emphasisLayer.jpg'
+import YellowBobbles from '../../assets/yellowBoublle.svg'
 import { ProductCard } from "../../components/ProductCard";
 import { ProductList } from "../../utils/productsList";
 import { CategoryCard } from "../../components/CategoryCard";
-import SnowImage from '../../assets/snow.svg'
-import StoreImage from '../../assets/store.png'
+import BobblesImage from '../../assets/boubble.svg'
+import StoreImage from '../../assets/storeImage.png'
 import WomenThinkingImage from '../../assets/womenThink.png'
 import { ButtonLink } from "../../components/ButtonLink";
 
@@ -17,39 +17,57 @@ import { CategoryList } from "../../utils/categoryList";
 
 
 export function Home(){
+
     return (
     <HomeContainer>
         <Header/>
         <Presentation>
-            <PresentationContent>
-                <h1>ILUMINE O SEU DIA A DIA!</h1>
-                <p>Aqui na Elétrica J. Santos queremos trazer mais luz para o seu dia a dia! Temos produtos para toda sua casa com a melhor qualidade e atendimento da região!</p>
+            <div>
+                <PresentationContent>
+                    <h1>ILUMINE O SEU DIA A DIA!</h1>
+                    <p>Aqui na Elétrica J. Santos queremos trazer mais luz para o seu dia a dia! Temos produtos para toda sua casa com a melhor qualidade e atendimento da região!</p>
 
-                <PresentationNavigation>
-                    <ButtonLink href="#EmphasisProducts">VEJA NOSSOS PRODUTOS</ButtonLink>
-                    <ButtonLink type={'secondary'}  href="#">NOS CONHEÇA MELHOR</ButtonLink>
+                    <PresentationNavigation>
+                        <ButtonLink href="#EmphasisProducts">VEJA NOSSOS PRODUTOS</ButtonLink>
+                        <ButtonLink type={'secondary'}  href="#">NOS CONHEÇA MELHOR</ButtonLink>
 
-                </PresentationNavigation>
-                <PresentationFooter>
-                    <ArrowDown/>
-                    <span>Role para ver mais</span>
-                </PresentationFooter>
-            </PresentationContent>
-            <img
-                
-                src={WomenImage}
-            />
+                    </PresentationNavigation>
+                    <PresentationFooter>
+                        <ArrowDown/>
+                        <span>Role para ver mais</span>
+                    </PresentationFooter>
+                </PresentationContent>
+                <img
+                    
+                    src={WomenImage}
+                />
+
+            </div>
         </Presentation>
         <EmphasisProducts id="EmphasisProducts">
-            <img 
-                src={EmphasisLayerImage}
-            />
-            <div>
-                <h2>PRODUTOS EM DESTAQUE</h2>
+          <EmphasisProductsHeader>
+                <div>
+                    
+                        <img
+                            alt=""
+                            src={BobblesImage}
+                        />
+            
+                </div>
+                <img
+                        alt=""
+                        src={YellowBobbles}
+                    />
+          </EmphasisProductsHeader>
+
+          <div>
+            <h2>PRODUTOS EM DESTAQUE</h2>
+                
                 <Products>
                     {
                         ProductList.map(product => (
                             <ProductCard
+                                key={product.id}
                                 name={product.name}
                                 oldPrice={product.oldPrice}
                                 price={product.price}
@@ -60,16 +78,19 @@ export function Home(){
 
                         ))
                     }
-                      
+                        
                 </Products>
 
-            </div>
+          </div>
+
+            
         </EmphasisProducts>
 
         <Category>
             <div>
                 <img
-                    src={SnowImage}
+                    alt=""
+                    src={BobblesImage}
                 />
                 <h2>
                     CATEGORIAS
@@ -79,6 +100,7 @@ export function Home(){
                 {
                      CategoryList.map(product => (
                         <CategoryCard
+                            key={product.category}
                             category={product.category}
                             imageUrl={product.imageUrl}
                         />
@@ -90,9 +112,12 @@ export function Home(){
         <StorePresentation>
             <h2>SUA MELHOR OPÇÃO</h2>
             <StorePresentationContent>
-                <img
-                    src={StoreImage}
-                />
+                <StorePresentationContentImageWrapper>
+                    <div/>
+                    <img
+                        src={StoreImage}
+                    />
+                </StorePresentationContentImageWrapper>
                 <div>
                      <p>
                         Desde 1970 somos especializados em materiais elétricos, sendo uma das 

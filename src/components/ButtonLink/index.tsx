@@ -3,18 +3,18 @@ import { styled } from "../../styles/global";
 export const ButtonLink = styled('a', {
     fontWeight: 700,
     display: 'flex',
-    fontSize: '1rem',
+    fontSize: '1.125rem',
     justifyContent: 'center',
     textTransform: 'uppercase',
     alignItems: 'center',
     width: '22.5rem',
     height: '3.93rem',
     borderRadius: '0.94rem',
-    borderWidth: 1,
     borderStyle: "solid",
 
     '&:hover': {
-        opacity: .8,
+        opacity: .95,
+      
     },
     
     variants: {
@@ -26,16 +26,29 @@ export const ButtonLink = styled('a', {
             secondary: {
                 color: '$white',
                 backgroundColor: 'transparent',
-                borderColor: '$white'
+                borderColor: '$white',
+                borderWidth: 1,
             },
             tertiary: {
                 color: '#fff',
                 backgroundColor: '$blue800'
             }
+        },
+        size: {
+            md: {
+                width: '22.5rem',
+                height: '3.93rem',
+            },
+            sm: {
+                width: '8.875rem',
+                height: '2.625rem',
+              
+            }
         }
     },
 
     defaultVariants: {
-        type: 'primary'
+        type: 'primary',
+        size: 'md'
     }
 })

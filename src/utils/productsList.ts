@@ -3,6 +3,7 @@ import productImage02Image from '../assets/productImage02.jpeg'
 import productImage03Image from '../assets/productImage03.jpeg'
 import productImage04Image from '../assets/productImage04.png'
 import productImage05Image from '../assets/productImage05.png'
+import productImage06Image from '../assets/productImage06.png'
 
 export const ProductList = [
     {   
@@ -46,6 +47,16 @@ export const ProductList = [
         category: 'Lustres',
         imageUrl: productImage05Image,
         name:  'Lustre suspenso rústico',
+        price: 1000,
+        oldPrice: 1500,
+        maximumInstallment: 2,
+    },
+
+    {
+        id: '06',
+        category: 'Lustres',
+        imageUrl: productImage06Image,
+        name:  'Choveiro rústico',
         price: 1000,
         oldPrice: 1500,
         maximumInstallment: 2,

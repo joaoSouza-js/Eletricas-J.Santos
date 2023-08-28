@@ -9,7 +9,9 @@ interface CategoryCardProps {
 export function CategoryCard({category,imageUrl}: CategoryCardProps){
    return (
         <CategoryCardContainer>
-            <span>{category}</span>
+            <div>
+                <span>{category}</span>
+            </div>
             <div>
                 <img 
                     src={imageUrl} 

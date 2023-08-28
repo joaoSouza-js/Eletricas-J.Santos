@@ -5,9 +5,12 @@ export const DropdownMenuContent = styled(DropdownMenu.Content,{
     padding: '2.53rem 0px',
     borderRadius: 20,
     backgroundColor: '#fff',
-    width: '22.5rem',
+    width: '70vw',
+    zIndex: 3,
+    position: 'relative',
+    right: '1.5rem',
   
-    maxHeight: '80vh',
+    maxHeight: '60vh',
     overflow: 'auto',
 
     boxShadow:' 0px 0px 4px 0px rgba(0, 0, 0, 0.5)'
@@ -25,8 +28,16 @@ export const DropdownMenuTrigger = styled(DropdownMenu.Trigger,{
     fontWeight: 500,
     justifyContent: 'center',
     alignItems: 'center',
-    color: '$blue800',
+    color: '$white',
     cursor: 'pointer',
+
+    borderBottom: '1px solid $blue400',
+        
+    '&:hover': {
+          borderBottom: '1px solid $white',
+    }
+
+  
 
   
 })
@@ -66,4 +77,3 @@ export const DropdownMenuItem = styled(DropdownMenu.Item,{
         }
     }
 })
-

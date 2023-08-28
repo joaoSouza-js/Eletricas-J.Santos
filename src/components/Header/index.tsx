@@ -1,35 +1,64 @@
 import HeaderBobbleSvg  from '../../assets/headerBobble.svg'
-import { HeaderNavigator, HeaderContainer } from './styles'
+import { HeaderNavigator, HeaderContainer, MobileHomeContainer } from './styles'
 import LogoSvg from '../../assets/Logo.svg'
-import { CategoryDropDownMenu } from '../CategoryDropDown'
+import { CategoryHoverCard } from '../CategoryHoverCard'
 import { CategoryList } from '../../utils/categoryList'
+import { ButtonLink } from '../ButtonLink'
+import { useEffect, useState } from 'react'
+import { Navigation } from '../Navigation'
+import Logo from '../../assets/icon.svg'
 
 export function Header(){
+    const [windowWidth, setWindowWidth] = useState<number|null>(null)
+
+    function handleWindowResized(){
+        setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize',handleWindowResized );
+
+    useEffect(() => handleWindowResized,[])
+
+
+
     return (
-        <HeaderContainer>
-            <div>
-                <img
-                    alt=''
-                    src={HeaderBobbleSvg}
-                />
-                <div>
-                  <img
-                    alt=''
-                    src={LogoSvg}
-                />
-
-                </div>
+        <>
+            {
+                !!windowWidth && windowWidth <= 720 ? (
+                    <MobileHomeContainer>
+                        <img src={Logo} />
+                        <Navigation categoryList={CategoryList}/>
+                    </MobileHomeContainer>
+            ):(
+                <HeaderContainer>
+                    <div>
+                        <img
+                            alt=''
+                            src={HeaderBobbleSvg}
+                        />
+                        <div>
+                        <img
+                            alt=''
+                            src={LogoSvg}
+                        />
+        
+                        </div>
+                    
+        
+                    </div>
+                
+                        <HeaderNavigator>
+                            <a href="#" >Home</a>
+                            <CategoryHoverCard categoryList={CategoryList}/>
+                            <a href="#">Sobre</a>
+                            <a href="#">Localização</a>
+                            <ButtonLink type='tertiary' size={'sm'} href="#">Contato</ButtonLink>
+                        </HeaderNavigator>
+                </HeaderContainer>
             
-
-            </div>
-            <HeaderNavigator>
-                <a href="#" >Home</a>
-                <CategoryDropDownMenu categoryList={CategoryList}/>
-                <a href="#">Sobre</a>
-                <a href="#">Localização</a>
-                <a href="#">Contato</a>
-            </HeaderNavigator>
-        </HeaderContainer>
+            )
+            }
+        </>
 
     )
 }

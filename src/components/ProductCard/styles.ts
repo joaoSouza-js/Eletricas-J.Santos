@@ -1,26 +1,21 @@
 import { styled } from "../../styles/global"
 
 export const ProductCardContainer = styled('div', {
- 
-
-    '@media (max-width: 720px)': {
-        flex: 1,
-        width: '100%',  
-        
-       
-    },
-   
+    width: '16.4375rem',
     position: 'relative',
     borderRadius: '0.9375rem',
-    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 1)',
+    boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, 1)',
     overflow: 'hidden',
 
     '& > img' : {
-        objectFit: 'cover',
         width:  '100%',
         height: '13.5rem'
-    }
+    },
 
+    '@media (max-width: 420px)': {
+        maxWidth: '20.4375rem',
+        width: '100%',
+    }
 
 })
 
@@ -109,7 +104,7 @@ export const ProductPrices = styled('div', {
 
 
 export const ProductFooter = styled('div', {
-    direction: 'flex',
+    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '2.63rem',

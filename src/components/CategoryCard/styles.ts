@@ -3,21 +3,36 @@ import { styled } from "@stitches/react";
 export const CategoryCardContainer = styled('div', {
     display: 'flex',
     alignItems: 'center',
-    
+    width: '16.4375rem',
    
     flexDirection: 'column',
-    gap: '1.25rem',
+    gap: '1rem',
 
-    '& > span': {
-        fontWeight: 'bold',
-        fontSize: '1.375rem',
-        color: '$yellow400',
+    '@media (max-width: 420px)': {
+        maxWidth: '20.4375rem',
+        width: '100%',
+    },
+
+    
+    
+    '& > div:nth-of-type(1)': {
+        minHeight: '4rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+        '& > span': {
+            fontWeight: 'bold',
+            textAlign: 'center',
+            fontSize: '1.375rem',
+            color: '$yellow400',
+        },
     },
 
 
-    '& > div': {
-        height: '16.125rem',
-        width: '16.4375rem',
+    '& > div:nth-of-type(2)': {
+        height: '18.4375rem',
+        width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -25,8 +40,7 @@ export const CategoryCardContainer = styled('div', {
         backgroundColor: '$yellow400',
 
         '& img': {
-            width: '12.125rem',
-            height: '12.125rem',
+            
         }
     }
 })
