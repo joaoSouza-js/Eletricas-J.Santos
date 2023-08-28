@@ -1,23 +1,15 @@
-import {  PopoverContent, PopoverItem, PopoverTrigger } from './styles';
+import {  PopoverContent,  PopoverTrigger } from './styles';
 import {  Menu } from 'lucide-react';
 import * as Popover from '@radix-ui/react-popover';
-import { CategoryHoverCard } from '../CategoryHoverCard';
 import { CategoryList } from '../../utils/categoryList';
 import { CategoryDropDownMenu } from '../CategoryDropDown';
 
-interface Category {
-    category: string,
-    imageUrl: string 
-}
 
-interface CategoryPopover {
-    categoryList: Category[]
-}
 
-export function Navigation({categoryList}:CategoryPopover){
+export function Navigation(){
     return (
         <Popover.Root>
-            <PopoverTrigger >
+            <PopoverTrigger>
                 <Menu/>
             </PopoverTrigger>
 
