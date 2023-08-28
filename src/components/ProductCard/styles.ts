@@ -12,7 +12,7 @@ export const ProductCardContainer = styled('div', {
         height: '13.5rem'
     },
 
-    '@media (max-width: 420px)': {
+    '@media (max-width: 500px)': {
         maxWidth: '20.4375rem',
         width: '100%',
     }

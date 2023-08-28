@@ -8,7 +8,7 @@ export const CategoryCardContainer = styled('div', {
     flexDirection: 'column',
     gap: '1rem',
 
-    '@media (max-width: 420px)': {
+    '@media (max-width: 500px)': {
         maxWidth: '20.4375rem',
         width: '100%',
     },

@@ -24,12 +24,7 @@ export function Header(){
     return (
         <>
             {
-                !!windowWidth && windowWidth <= 720 ? (
-                    <MobileHomeContainer>
-                        <img src={Logo} />
-                        <Navigation />
-                    </MobileHomeContainer>
-            ):(
+                !!windowWidth && windowWidth >= 900 ? (
                 <HeaderContainer>
                     <div>
                         <img
@@ -55,6 +50,12 @@ export function Header(){
                             <ButtonLink type='tertiary' size={'sm'} href="#">Contato</ButtonLink>
                         </HeaderNavigator>
                 </HeaderContainer>
+                    
+            ):(
+                <MobileHomeContainer>
+                        <img src={Logo} />
+                        <Navigation />
+                    </MobileHomeContainer>
             
             )
             }
