@@ -14,11 +14,13 @@ export const ProductCardContainer = styled('div', {
 
     
 
-    '@media (max-width: 500px)': {
-       
+    '@media (max-width: 600px)': {
+        width: '22.4375rem',
+    },
+
+    '@media (max-width: 459px)': {
         width: '100%',
-        flexGrow: 1
-    }
+    },
 
 })
 
@@ -47,6 +49,11 @@ export const Separator = styled('div', {
     borderRadius: '0.94rem',
     height: '1.18rem',
     backgroundColor : '$blue800',
+
+    '@media (max-width: 600px)': {
+        width: '90%',
+        margin: '0 auto'
+    },
 
 
 })

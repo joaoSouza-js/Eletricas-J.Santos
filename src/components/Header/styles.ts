@@ -44,7 +44,7 @@ export const HeaderContainer = styled('header',{
 
 export const MobileHomeContainer = styled('header', {
     display: 'flex',
-    padding: '2rem 3rem',
+    padding: '2.2rem 2rem',
     justifyContent: 'space-between',
 
     '& > img': {

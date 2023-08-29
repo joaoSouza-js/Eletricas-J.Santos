@@ -28,7 +28,7 @@ export function Header(){
     return (
         <>
             {
-                !!windowWidth && windowWidth <= 900 ? (
+                !!windowWidth && windowWidth <= 720 ? (
                     <MobileHomeContainer>
                         <img src={Logo} />
                         <Navigation />

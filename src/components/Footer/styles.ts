@@ -3,7 +3,7 @@ import { styled } from "../../styles/global"
 export const FooterContainer = styled('div', {
     backgroundColor: '$blue800',
 
-    padding: '0 3rem',
+    padding: '0 2rem',
 
     'span': {
         fontSize: '1rem',
@@ -27,7 +27,11 @@ export const HomeFooterHeader = styled('div', {
         flexDirection: 'column',
         justifyContent: 'normal',
         alignItems: 'center',
-        gap: '2rem'
+        gap: '2rem',
+
+        ' & > div > span': {
+            textAlign: 'center'
+        }
     },
     
 
@@ -97,7 +101,7 @@ export  const Copyright = styled('div', {
             display: 'inline-block',
      
             width: '100%',
-            maxWidth: '65%'
+            maxWidth: '62%'
         }
     },
     '@media (max-width: 500px)': {
@@ -108,6 +112,8 @@ export  const Copyright = styled('div', {
         '& > span': {
             display: 'inline-block',
             maxWidth: 'none',
+            textAlign: 'center',
+
             width: '100%',
         
         },

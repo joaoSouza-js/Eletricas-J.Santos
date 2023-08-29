@@ -16,8 +16,6 @@ export const Presentation = styled('section', {
     
 
  
-    paddingLeft:'1.5rem',
-    paddingRight: '1.5rem',
 
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
@@ -38,6 +36,7 @@ export const Presentation = styled('section', {
 
         '& > img': {
             height:796,
+            width: '70%',
             maxWidth: 702,
             
             '@media (max-width: 900px)': {
@@ -134,7 +133,7 @@ export const EmphasisProducts = styled('div', {
             'font-weight': 700,
             'lineHeight': 1.2,
 
-            '@media (max-width: 720px)':{
+            '@media (max-width: 920px)':{
                 textAlign: 'center',
                 marginLeft: '0',
 
@@ -152,24 +151,26 @@ export const EmphasisProductsHeader = styled('div', {
     position: 'relative',
     left: '-7.4375rem',
     display:'flex',
+    width: '100%',
+    zIndex: -1,
     maxWidth: '78.3125rem',
    
     margin: '0 auto',
 
-    '@media (max-width: 720px)':{
+    '@media (max-width: 920px)':{
         width: '100%',
         left:'0',
     },
 
     '& > img': {
-        zIndex: -1,
+        zIndex: -2,
         marginLeft: '-4.2rem',
         marginTop: '1.62rem',
         position: 'relative',
         width: '15.625rem',
         height:' 15.75rem',
 
-        '@media (max-width: 720px)': {
+        '@media (max-width: 920px)': {
           
             height:0,
         
@@ -184,7 +185,8 @@ export const EmphasisProductsHeader = styled('div', {
     
 
     '& > div:nth-of-type(1)': {
-        width: '67.0625rem',
+        maxWidth: '67.0625rem',
+        width: '100%',
         height: '28.5rem',
         borderTopRightRadius: '0.94rem',
         background: '$blue800',
@@ -193,7 +195,7 @@ export const EmphasisProductsHeader = styled('div', {
             marginLeft: '20.75rem',
         },
 
-        '@media (max-width: 720px)':{
+        '@media (max-width: 920px)':{
             width: '100%',
             paddingLeft:'2rem',
             paddingRight: '2rem',
@@ -215,7 +217,7 @@ export const Products = styled('section', {
     margin: '0 auto',
     marginTop: '1.56rem',
     
-    zIndex: 2,
+   
     maxWidth: '71.6rem',
    
     flexWrap: 'wrap',
@@ -322,7 +324,7 @@ export const StorePresentationContent = styled('div', {
 
     '@media (max-width: 720px)': {
         '& > div': {
-            padding: '0 1.5rem',
+            
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
