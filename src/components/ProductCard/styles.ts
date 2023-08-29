@@ -19,7 +19,7 @@ export const ProductCardContainer = styled('div', {
     },
 
     '@media (max-width: 459px)': {
-        width: '100%',
+        width: '90%',
     },
 
 })

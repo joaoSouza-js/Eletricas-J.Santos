@@ -33,13 +33,9 @@ export const DropdownMenuTrigger = styled(DropdownMenu.Trigger,{
 
     borderBottom: '1px solid $blue400',
         
-    '&:hover': {
+    '&:hover , &[data-state=open]': {
           borderBottom: '1px solid $white',
-    }
-
-  
-
-  
+    }  
 })
 
 export const DropdownMenuItem = styled(DropdownMenu.Item,{

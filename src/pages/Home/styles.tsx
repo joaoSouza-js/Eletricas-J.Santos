@@ -62,10 +62,18 @@ export const PresentationContent = styled('div', {
     '@media (max-width: 920px)': {
         width: '100%',
         display: 'flex',
+       
         maxWidth: 'none',
         justifyContent: 'center',
         flexDirection: 'column'
+        
     },
+    
+    '@media (max-width: 720px)': {
+        paddingBottom: '2rem',
+        marginTop: '2.5rem',
+    },
+
     color: '$white',
 
         '& > h1': {
