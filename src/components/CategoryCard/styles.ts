@@ -9,7 +9,6 @@ export const CategoryCardContainer = styled('div', {
     gap: '1rem',
 
     '@media (max-width: 500px)': {
-        
         width: '100%',
     },
 
