@@ -23,7 +23,7 @@ export const HomeFooterHeader = styled('div', {
     display: 'flex',
     justifyContent: 'space-between',
 
-    '@media (max-width: 500px)': {
+    '@media(max-width: 500px)': {
         flexDirection: 'column',
         justifyContent: 'normal',
         alignItems: 'center',
@@ -54,7 +54,7 @@ export const HomeFooterHeader = styled('div', {
 
         },
 
-       '@media (max-width: 500px)': {
+       '@media(max-width: 500px)': {
             display: 'flex',
            
             justifyContent: 'center',

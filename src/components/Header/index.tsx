@@ -12,19 +12,28 @@ export function Header(){
     const [windowWidth, setWindowWidth] = useState<number|null>(null)
 
     function handleWindowResized(){
-        setWindowWidth(window.innerWidth)
+        setWindowWidth(document.documentElement.clientWidth)
     }
 
     window.addEventListener('resize',handleWindowResized );
 
-    useEffect(() => handleWindowResized,[])
+    useEffect(() => {
+        handleWindowResized()
+    },[])
+
+    console.log(windowWidth)
 
 
 
     return (
         <>
             {
-                !!windowWidth && windowWidth >= 900 ? (
+                !!windowWidth && windowWidth <= 900 ? (
+                    <MobileHomeContainer>
+                        <img src={Logo} />
+                        <Navigation />
+                    </MobileHomeContainer>
+            ):(
                 <HeaderContainer>
                     <div>
                         <img
@@ -50,12 +59,6 @@ export function Header(){
                             <ButtonLink type='tertiary' size={'sm'} href="#">Contato</ButtonLink>
                         </HeaderNavigator>
                 </HeaderContainer>
-                    
-            ):(
-                <MobileHomeContainer>
-                        <img src={Logo} />
-                        <Navigation />
-                    </MobileHomeContainer>
             
             )
             }
